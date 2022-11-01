@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+       stage('Build') { 
+        mvn Build
+    }
+    stage('Test') { 
+       echo "test is running" 
+    }
+    stage('Deploy') { 
+        mvn package
+    }
+}
