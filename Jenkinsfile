@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any   {
        stage('Build') { 
         mvn compile
     }
@@ -8,5 +8,6 @@ pipeline {
     }
     stage('Deploy') { 
         mvn package
+    }
     }
 }
