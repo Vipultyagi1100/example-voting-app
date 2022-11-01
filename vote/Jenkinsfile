@@ -1,13 +1,13 @@
 pipeline {
     agent any   {
        stage('Build') { 
-        mvn build
+        echo "build stage is running" 
     }
     stage('Test') { 
-       echo "test is running" 
+       echo "test stage is running" 
     }
     stage('Deploy') { 
-        mvn package
+        echo "deploy stage is running" 
     }
     }
 }
