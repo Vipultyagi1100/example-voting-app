@@ -1,7 +1,7 @@
 pipeline {
     agent any
        stage('Build') { 
-        mvn Build
+        mvn build
     }
     stage('Test') { 
        echo "test is running" 
